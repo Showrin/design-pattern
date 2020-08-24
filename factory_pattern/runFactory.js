@@ -1,6 +1,6 @@
 "use strict";
 exports.__esModule = true;
-var VehicleFactory_1 = require("./factory_pattern/VehicleFactory");
+var VehicleFactory_1 = require("./VehicleFactory");
 var vehicleFactory = new VehicleFactory_1["default"]();
 var ourCar = vehicleFactory.getCar();
 var ourPlane = vehicleFactory.getPlane();
