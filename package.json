@@ -4,7 +4,8 @@
   "description": "\"A test on different design patterns\"",
   "main": "index.js",
   "scripts": {
-    "start": "tsc index.ts && node index.js"
+    "runFactory": "tsc ./factory_pattern/runFactory.ts && node ./factory_pattern/runFactory.js",
+    "runAbstractFactory": "tsc ./abstract_factory_pattern/runAbstractFactory.ts && node ./abstract_factory_pattern/runAbstractFactory.js"
   },
   "repository": "git@github.com-28985234:Showrin/design-pattern.git",
   "author": "Showrin Barua <showrin.barua@welldev.io>",
