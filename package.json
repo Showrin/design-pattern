@@ -1,7 +1,7 @@
 {
   "name": "design-pattern",
   "version": "1.0.0",
-  "description": "\"A test on different design patterns\"",
+  "description": "A test on different design patterns",
   "main": "index.js",
   "scripts": {
     "runFactory": "tsc ./factory_pattern/runFactory.ts && node ./factory_pattern/runFactory.js",
