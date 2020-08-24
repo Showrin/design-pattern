@@ -10,5 +10,10 @@
   "repository": "git@github.com-28985234:Showrin/design-pattern.git",
   "author": "Showrin Barua <showrin.barua@welldev.io>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^14.6.0",
+    "chalk": "^4.1.0",
+    "console-table-printer": "^2.3.17"
+  }
 }
