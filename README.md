@@ -78,7 +78,7 @@ This program has following development dependencies.
 
 ## Procedure: Factory Design Pattern
 
-> **By analayzing the given interface, it seems to be following the Factory Design Pattern. Here's the procedure for creating `Car` and `Plane` class, using this design pattern.**
+> **By analayzing the given interface, it seems to be following the Factory Design Pattern. Here's the procedure of creating `Car` and `Plane` class, using this design pattern.**
 
 <br/>
 
@@ -192,3 +192,141 @@ table.printTable();
 ### Output
 
 ![Factory-Pattern-Output-by-Showrin](https://i.imgur.com/wmM7iAo.png)
+
+<br/>
+
+## Procedure: Abstract Factory Design Pattern
+
+> **`Car` and `Plane` class can be also created using Abstract Factory Design Pattern. Here's the procedure of creating `Car` and `Plane` class, using this design pattern.**
+
+<br />
+
+First, interfaces for `VehicleFactory`, `Car` & `Plane` are implemented.
+
+```
+interface VehicleFactoryInterface {
+  createCar(): Car;
+  createPlane(): Plane;
+}
+```
+
+```
+interface CarInterface {
+  set_num_of_wheels(): number;
+  set_num_of_passengers(): number;
+  has_gas(): boolean;
+}
+```
+
+```
+interface PlaneInterface {
+  set_num_of_wheels(): number;
+  set_num_of_passengers(): number;
+  has_gas(): boolean;
+}
+```
+
+<br />
+
+Then, `Car` and `Plane` classes are implemented.
+
+```
+class Car implements CarInterface {
+  set_num_of_wheels() {
+    return 4;
+  }
+
+  set_num_of_passengers() {
+    return 4;
+  }
+
+  has_gas() {
+    return true;
+  }
+}
+```
+
+```
+class Plane implements PlaneInterface {
+  set_num_of_wheels() {
+    return 14;
+  }
+
+  set_num_of_passengers() {
+    return 100;
+  }
+
+  has_gas() {
+    return false;
+  }
+}
+```
+
+<br />
+
+After that, the `VehicleFactory` class is implemented and it decides which class should be created.
+
+```
+class VehicleFactory implements VehicleFactoryInterface {
+  createCar(): Car {
+    return new Car();
+  }
+
+  createPlane(): Plane {
+    return new Plane();
+  }
+}
+```
+
+<br />
+
+And now, it's time to create `Car` and `Plane` from the Abstract Factory Design Pattern.
+
+```
+import { Table } from "console-table-printer";
+const chalk = require("chalk");
+
+const vehicleFactory: VehicleFactory = new VehicleFactory();
+const ourCar: Car = vehicleFactory.createCar();
+const ourPlane: Plane = vehicleFactory.createPlane();
+
+const table = new Table();
+
+table.addRow(
+  {
+    Product: "Car",
+    set_num_of_wheels: ourCar.set_num_of_wheels(),
+    set_num_of_passengers: ourCar.set_num_of_passengers(),
+    has_gas: ourCar.has_gas(),
+  },
+  { color: "red" }
+);
+
+table.addRow(
+  {
+    Product: "Plane",
+    set_num_of_wheels: ourPlane.set_num_of_wheels(),
+    set_num_of_passengers: ourPlane.set_num_of_passengers(),
+    has_gas: ourPlane.has_gas(),
+  },
+  { color: "green" }
+);
+
+console.log(
+  chalk.bold.red(
+    "\n### These products are created using [" +
+      chalk.underline("Abstract Factory Pattern") +
+      "] ###"
+  )
+);
+
+table.printTable();
+```
+
+### Output
+
+![Abstract-Factory-Pattern-Output-by-Showrin](https://i.imgur.com/dPaLwj3.png)
+
+<br/>
+
+> **Actually, `Abstract Factory Pattern` is similar to `Factory Pattern`. The difference is that all products have different interfaces in this design pattern.**
