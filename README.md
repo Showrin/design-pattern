@@ -61,3 +61,17 @@ $ npm start
 ### Console Output
 
 ![Design-pattern-output-by-Showrin](https://i.imgur.com/QKBEmQd.png)
+
+<br/>
+
+## Dev Dependencies
+
+This program has following development dependencies.
+
+| Module Name           | Version | Why it's used                                            |
+| --------------------- | ------- | -------------------------------------------------------- |
+| @types/node           | ^14.6.0 | It's being used for using `require` syntax in typescript |
+| chalk                 | ^4.1.0  | It's being used for giving colors to console texts       |
+| console-table-printer | ^2.3.17 | It's being used for printing data in console as a table  |
+
+<br/>
