@@ -330,3 +330,9 @@ table.printTable();
 <br/>
 
 > **Actually, `Abstract Factory Pattern` is similar to `Factory Pattern`. The difference is that all products have different interfaces in this design pattern.**
+
+<br />
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
