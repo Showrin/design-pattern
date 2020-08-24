@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "runFactory": "tsc ./factory_pattern/runFactory.ts && node ./factory_pattern/runFactory.js",
-    "runAbstractFactory": "tsc ./abstract_factory_pattern/runAbstractFactory.ts && node ./abstract_factory_pattern/runAbstractFactory.js"
+    "runAbstractFactory": "tsc ./abstract_factory_pattern/runAbstractFactory.ts && node ./abstract_factory_pattern/runAbstractFactory.js",
+    "start": "yarn runFactory && yarn runAbstractFactory"
   },
   "repository": "git@github.com-28985234:Showrin/design-pattern.git",
   "author": "Showrin Barua <showrin.barua@welldev.io>",
