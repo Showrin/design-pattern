@@ -86,9 +86,9 @@ First, the interface for `Vehicle` is implemented.
 
 ```
 interface Vehicle {
-	set_num_of_wheels(): number;
-	set_num_of_passengers(): number;
-	has_gas(): boolean;
+  set_num_of_wheels(): number;
+  set_num_of_passengers(): number;
+  has_gas(): boolean;
 }
 ```
 
@@ -98,33 +98,33 @@ Then, `Car` and `Plane` classes are implemented using the `Vehicle` interface.
 
 ```
 class Car implements Vehicle {
-	set_num_of_wheels() {
-		return 4;
-	}
+  set_num_of_wheels() {
+    return 4;
+  }
 
-	set_num_of_passengers() {
-		return 4;
-	}
+  set_num_of_passengers() {
+    return 4;
+  }
 
-	has_gas() {
-		return true;
-	}
+  has_gas() {
+    return true;
+  }
 }
 ```
 
 ```
 class Plane implements Vehicle {
-	set_num_of_wheels() {
-		return 14;
-	}
+  set_num_of_wheels() {
+    return 14;
+  }
 
-	set_num_of_passengers() {
-		return 100;
-	}
+  set_num_of_passengers() {
+    return 100;
+  }
 
-	has_gas() {
-		return false;
-	}
+  has_gas() {
+    return false;
+  }
 }
 ```
 
@@ -134,13 +134,13 @@ Then, the `VehicleFactory` class is implemented **that defines which vehicle sho
 
 ```
 class VehicleFactory {
-	getCar(): Car {
-		return new Car();
-	}
+  getCar(): Car {
+    return new Car();
+  }
 
-	getPlane(): Plane {
-		return new Plane();
-	}
+  getPlane(): Plane {
+    return new Plane();
+  }
 }
 ```
 
